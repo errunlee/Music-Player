@@ -1,0 +1,108 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+*{
+  margin:0;
+  padding:0;
+}
+section{
+  position: relative;
+}
+
+article{
+     position: absolute;
+    font-family: monospace;
+    height: 37px;
+    box-shadow: 0px -2px 9px #f3ec19;
+    border-bottom: 0;
+    width: 76%;
+    text-align: center;
+    font-size: 17px;
+    color: #b9868f;
+    visibility: hidden;
+    top: -40px;
+    left: 92px;
+}
+.container{
+  height:70px;
+  width:400px;
+  position: relative;
+  box-shadow: 5px 10px 18px #888888;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: right;
+  align-items:center;
+}
+.flex{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height:100%;
+  flex-direction:column;
+}
+.flex header{
+  position:absolute;
+  top:20%;
+}
+.flex header h1{
+    margin-bottom: 50px;
+    color: #a13447;
+    font-family: monospace;
+    font-size: 32px;
+}
+
+.container #image{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    top:-15px;
+    background-image:url('images/IMG_20221105_210012.jpg');
+    background-size: cover;
+    left:30px;
+}
+.btns{
+  margin-right: 70px;
+}
+.btns button{
+  border: none;
+  background: white;
+  padding: 10px;
+  font-size: 30px;
+  letter-spacing: 15px;
+ color: #a78c8c;
+}
+.btns button:hover{
+  cursor: pointer;
+}
+
+.moving{
+ animation: rotating 2s linear infinite;
+}
+
+.songAnim{
+  animation: songNameAnim 1s linear 1;
+  visibility: initial;
+}
+@keyframes rotating{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+@keyframes songNameAnim{
+  from{
+    visibility: hidden;
+    top:0;
+  }
+  70%{
+    visibility: initial;
+  }
+  to{
+    visibility: initial;
+    top:-40px;
+  }
+}
