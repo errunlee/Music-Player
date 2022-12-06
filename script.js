@@ -21,6 +21,10 @@ function songName(){
 }
 let playSound = (soundName) => {
   sound = new Audio(`audios/sound${soundName}.mp3`);
+  sound.addEventListener('timeupdate',()=>{
+    let progressTime=(sound.currentTime/sound.duration)*100;
+    progress.style.transform=`translateX(${progressTime}%`
+  })
 }
 playSound(flag);
 
@@ -30,6 +34,7 @@ function songEnd() {
     sound.pause();
     playSound(flag);
     sound.play();
+    songName();
   })
 }
 
@@ -82,4 +87,4 @@ previous.addEventListener('click', () => {
   songName();
   songEnd();
 })
-
+let i=100;;

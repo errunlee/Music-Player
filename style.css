@@ -24,6 +24,26 @@ article{
     top: -40px;
     left: 92px;
 }
+.progress-bar{
+  height:4px;
+  width:400px;
+  overflow:hidden;
+  background:#ca44ca;
+}
+#progress{
+  height:10px;
+  width:100%;    
+  background:#ffffff;
+}
+@keyframes loading{
+  from{
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+
 .container{
   height:70px;
   width:400px;
